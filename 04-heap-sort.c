@@ -30,6 +30,8 @@ void maxHeapify(int arr[], int index)
     int largest = index;
     int lc = 2 * index;
     int rc = lc + 1;
+    printf("Parent: %d\n", largest);
+    printf("LC: %d \tRC: %d\n", lc, rc);
 
     // Check if left child exists and is greater than the current largest
     if (lc <= arr[0] && arr[lc] > arr[largest])
