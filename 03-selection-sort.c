@@ -38,7 +38,7 @@ void selectionSort(int arr[])
     // Inner loop: searches through the unsorted portion of the array, to find the minimum element
 
     for (n = 0; n < SIZE - 1; n++)
-    {                 // n-1 passs
+    {                 // n-1 pass or iteration
         min = arr[n]; // Assume that the smallest is the first element
         loc = n;
         for (m = n + 1; m < SIZE; m++)
