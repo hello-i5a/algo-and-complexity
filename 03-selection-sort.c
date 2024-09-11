@@ -1,26 +1,29 @@
 #include <stdio.h>
-#define MAX 5
+#define SIZE 5
 
-void display(int arr[]);
+void displayArr(int arr[]);
 void selectionSort(int arr[]);
 
 int main()
 {
-    int a[MAX] = {5, 3, 4, 1, 2};
+    int elems[SIZE] = {56, 99, 21, 47, 68};
 
-    display(a);
+    printf("Before:\n");
+    displayArr(elems);
 
-    selectionSort(a);
+    selectionSort(elems);
 
-    display(a);
+    printf("\nAfter:\n");
+    displayArr(elems);
 
     return 0;
 }
 
-void display(int arr[])
+void displayArr(int arr[])
 {
     int n;
-    for (n = 0; n < MAX; n++)
+
+    for (n = 0; n < SIZE; n++)
     {
         printf("%d ", arr[n]);
     }
@@ -29,27 +32,28 @@ void display(int arr[])
 
 void selectionSort(int arr[])
 {
-    int i, j, smallestNdex, temp;
+    int n, m, min, loc, temp;
 
-    // Iterate through the unsorted array
-    for (i = 0; i < MAX - 1; i++)
-    {
-        smallestNdex = i;
+    // Outer loop: the first element until the second to the last element
+    // Inner loop: searches through the unsorted portion of the array, to find the minimum element
 
-        // Search through the unsorted portion of the array to find the smallest
-        for (j = i + 1; j < MAX; j++)
+    for (n = 0; n < SIZE - 1; n++)
+    {                 // n-1 passs
+        min = arr[n]; // Assume that the smallest is the first element
+        loc = n;
+        for (m = n + 1; m < SIZE; m++)
         {
-            if (arr[j] < arr[smallestNdex])
+            if (min > arr[m])
             {
-                smallestNdex = j;
+                min = arr[m];
+                loc = m;
             }
         }
-
-        if (i != smallestNdex)
-        {
-            temp = arr[i];
-            arr[i] = arr[smallestNdex];
-            arr[smallestNdex] = temp;
+        if (loc != n)
+        { // If the minimum is not the index you initially begin with, swap the two values
+            temp = arr[n];
+            arr[n] = arr[loc];
+            arr[loc] = temp;
         }
     }
 }
