@@ -4,13 +4,15 @@ Elementary Sorting Algorithms
 2. Selection sort
 3. Insertion sort
 
-A collection of elements -> Array implementation
+Sorting -> Process of rearranging elements in a collection
+Collection of elements -> Array implementation
 Before you sort, you swap -> temporary variable
 
 Bubble sort:
-The largest value bubble up (or goes) to the top (or tail).
-* First loop: i -> from N to 0
-* Inner loop: j -> from 0 to i-1
-* arr[j] > arr[j + 1] -> swap the two values
-
+The largest value bubbles (or goes) up to the top (or tail).
+    Pseudocode
+        * First loop (outer): i -> from N to 0
+        * Second loop (inner): j -> from 0 to i-1
+        * arr[j] > arr[j + 1] -> swap the two values
+If there are N numbers of elements, the total number of passes required to sort it is (N-1).
 */
