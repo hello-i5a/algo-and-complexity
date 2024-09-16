@@ -12,7 +12,9 @@ Bubble sort:
 The largest value bubbles (or goes) up to the top (or tail).
     Pseudocode
         * First loop (outer): i -> from N-1 to 0
+            To get the last element, second to the last element, so on and so forth
         * Second loop (inner): j -> from 0 to i-1
+            Compare the current element to its adjacent element
         * arr[j] > arr[j + 1] -> swap the two values
 If there are N numbers of elements, the total number of passes required to sort it is (N-1).
 */
