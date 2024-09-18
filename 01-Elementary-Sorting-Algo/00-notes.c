@@ -36,4 +36,10 @@ Smallest element is searched in the array and once found, it is placed in its co
         * "Assumed" smallest element: min = i
         * Find the smallest element by comparison: a[min] > a[j]
         * If the index of the "assumed" smallest are not the same after comparison, swap: i != min
+If the total array element is N, the number of passes required to sort is (N-1).
+    Analysis
+        * Time complexity: First pass requires (N-1) comparisons, second is (N-2), so on and so forth.
+                            O(N^2)
+        * Space complexity: In-place sorting
+                            O(1)
 */
