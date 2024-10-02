@@ -12,9 +12,9 @@ Bubble sort:
 The largest value bubbles (or goes) up to the top (or tail).
     Pseudocode
         * First loop (outer): i -> from N-1 to 0
-            To get the last element, second to the last element, so on and so forth
             The goal is to sort the biggest element first
-        * Second loop (inner): j -> from 0 to i-1
+            To get the last element, second to the last element, so on and so forth
+        * Second loop (inner): j -> from 0 to N-i
             Compare the current element to its adjacent element
         * arr[j] > arr[j + 1] -> swap the two values
 If there are N numbers of elements, the total number of passes required to sort it is (N-1).
@@ -42,4 +42,13 @@ If the total array element is N, the number of passes required to sort is (N-1).
                             O(N^2)
         * Space complexity: In-place sorting
                             O(1)
+
+Insertion sort:
+Every pass moves an element from unsorted portion to sorted portion until all elements are in the sorted list.
+    Pseudocode
+    * Assume that you have sorted portion (i) and unsorted portion (j)
+    * First loop (outer): i -> from first element to the last element
+    * Second loop (inner): j -> adjacent to i
+                                compares every element in the sorted portion until the first element, going backwards
+    * A temporary variables will hold j so that shifting can occur
 */
