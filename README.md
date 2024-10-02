@@ -8,7 +8,7 @@
 - Counting sort
 - Bucket sort
 - Radix sort
-- [Insert algorithm]
+- Strand sort
 - Gnome sort
 - Tournament sort
 - Comb sort
