@@ -35,6 +35,7 @@ void gnomeSort(int arr[], int size)
 
     while (i < size)
     {
+        // If the current element is less than the previous element, swap them
         if (arr[i] < arr[i - 1])
         {
             // Swap
@@ -42,9 +43,7 @@ void gnomeSort(int arr[], int size)
             arr[i] = arr[i - 1];
             arr[i - 1] = temp;
 
-            // Step backward
-            // i should not be less than 1 as it will be out of bounds
-            // Stop when i - 1 = 0
+            // Step backward if a swap was made, but until the start of array only
             if (i > 1)
             {
                 i -= 1;
@@ -52,7 +51,7 @@ void gnomeSort(int arr[], int size)
         }
         else
         {
-            // Step forward
+            // If no swap was made, step forward
             i += 1;
         }
     }
